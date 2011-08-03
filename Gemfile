@@ -20,7 +20,21 @@ end
 gem 'jquery-rails'
 
 # Use unicorn as the web server
-# gem 'unicorn'
+gem 'unicorn'
+
+group :development, :test do
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'shoulda'
+  gem 'capybara'
+  gem 'cucumber'
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
+  gem 'spork', '~> 0.9.0.rc'
+  gem 'webrat'
+  gem 'factory_girl_rails'
+  gem 'autotest'
+end
 
 # Deploy with Capistrano
 # gem 'capistrano'
