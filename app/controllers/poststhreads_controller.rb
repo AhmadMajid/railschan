@@ -25,6 +25,7 @@ class PoststhreadsController < ApplicationController
   # GET /poststhreads/new.json
   def new
     @poststhread = Poststhread.new
+    @post = Post.new
 
     respond_to do |format|
       format.html # new.html.erb
