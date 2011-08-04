@@ -1,5 +1,6 @@
 class Post
   include Mongoid::Document
-  field :author, :type => String
-  field :content, :type => String
+  field :author
+  field :author_email
+  field :content
 end
