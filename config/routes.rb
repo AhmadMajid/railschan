@@ -1,5 +1,7 @@
 Railschan::Application.routes.draw do
 
+  get "board/show"
+
   resources :posts_thread do
     resources :posts
   end
