@@ -9,5 +9,8 @@
   Subject:
   = @post.subject
 %p
+  Image:
+  = image_tag @post.image.url
+%p
   Comment:
   = @post.content

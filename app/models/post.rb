@@ -6,4 +6,6 @@ class Post
   field :subject
   field :content
 
+  mount_uploader :image, ImageUploader
+
 end

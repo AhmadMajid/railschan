@@ -10,7 +10,8 @@ gem 'mongoid'
 
 gem 'haml'
 
-gem 'carrierwave'
+gem 'carrierwave', '= 0.5.4'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid', :git => 'git://github.com/jnicklas/carrierwave-mongoid.git'
 
 # Gems used only for assets and not required
 # in production environments by default.

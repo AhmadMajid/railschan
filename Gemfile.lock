@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/jnicklas/carrierwave-mongoid.git
+  revision: 1bd92e2b28959b15df4b7b016d33b318df1a2689
+  specs:
+    carrierwave-mongoid (0.1.0)
+      carrierwave
+      mongoid
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -45,7 +53,7 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 0.2.0)
       xpath (~> 0.1.4)
-    carrierwave (0.5.6)
+    carrierwave (0.5.4)
       activesupport (~> 3.0)
     childprocess (0.2.0)
       ffi (~> 1.0.6)
@@ -197,7 +205,8 @@ DEPENDENCIES
   autotest
   bson_ext
   capybara
-  carrierwave
+  carrierwave (= 0.5.4)
+  carrierwave-mongoid!
   coffee-rails (~> 3.1.0.rc)
   cucumber
   cucumber-rails
