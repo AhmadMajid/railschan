@@ -1,0 +1,2 @@
+class PostsThreadController < ApplicationController
+end
