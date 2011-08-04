@@ -1,5 +1,7 @@
 Railschan::Application.routes.draw do
 
+  resources :poststhreads
+
   resources :posts
 
   # The priority is based upon order of creation:

@@ -1,0 +1,10 @@
+= form_for @poststhread do |f|
+  -if @poststhread.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@poststhread.errors.count, "error")} prohibited this poststhread from being saved:"
+      %ul
+        - @poststhread.errors.full_messages.each do |msg|
+          %li= msg
+
+  .actions
+    = f.submit 'Save'
