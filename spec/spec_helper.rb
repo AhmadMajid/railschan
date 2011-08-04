@@ -24,7 +24,7 @@ Spork.prefork do
     config.mock_with :rspec
 
     require 'database_cleaner'
-    config.before(:suit) do
+    config.before(:suite) do
       DatabaseCleaner.orm = "mongoid"
       DatabaseCleaner.strategy = :truncation, {:except => %w[ neighborhood ]}
     end
