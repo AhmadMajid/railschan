@@ -8,6 +8,4 @@ class Post
 
   mount_uploader :image, ImageUploader
 
-  embedded_in :poststhread, :inverse_of => :posts
-
 end
