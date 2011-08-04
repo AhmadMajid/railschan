@@ -1,7 +1,6 @@
 Railschan::Application.routes.draw do
-  get "posts/new"
 
-  get "posts/create"
+  resource :posts
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
