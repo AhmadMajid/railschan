@@ -1,9 +1,10 @@
 Railschan::Application.routes.draw do
 
-  get "board/show"
 
-  resources :posts_thread do
-    resources :posts
+  resources :boards do
+    resources :posts_thread do
+      resources :posts
+    end
   end
 
   # The priority is based upon order of creation:
