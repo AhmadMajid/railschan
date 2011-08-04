@@ -10,7 +10,7 @@ gem 'mongoid'
 
 gem 'haml'
 
-gem 'mongoid-paperclip', :require => "mongoid_paperclip"
+gem 'paperclip'
 
 # Gems used only for assets and not required
 # in production environments by default.

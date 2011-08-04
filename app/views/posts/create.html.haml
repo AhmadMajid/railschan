@@ -1,13 +1,16 @@
 %h1 Posts#create
 %p
   Name:
-  =@post.author
+  = @post.author
 %p
   E-Mail:
-  =@post.author_email
+  = @post.author_email
 %p
   Subject:
-  =@post.subject
+  = @post.subject
+%p
+  Image:
+  = image_tag @post.picture.url
 %p
   Comment:
-  =@post.content
+  = @post.content
