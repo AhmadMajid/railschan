@@ -39,6 +39,9 @@ module Railschan
 
     # Generators
     config.generators do |g|
+      g.template_engine :haml
+      g.stylesheet_engine = :sass
+      g.orm :mongoid
       g.test_framework :rspec, fixture: false, views:false
     end
 

@@ -8,6 +8,7 @@ gem 'rails', '3.1.0.rc5'
 gem 'bson_ext'
 gem 'mongoid'
 
+gem 'haml'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -21,6 +22,10 @@ gem 'jquery-rails'
 
 # Use unicorn as the web server
 gem 'unicorn'
+
+group :development do
+  gem 'haml-rails'
+end
 
 group :development, :test do
   gem 'rspec'
