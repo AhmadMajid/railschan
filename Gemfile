@@ -39,6 +39,7 @@ group :development, :test do
   gem 'webrat'
   gem 'factory_girl_rails'
   gem 'autotest'
+  gem 'mongoid-rspec'
 end
 
 # Deploy with Capistrano
