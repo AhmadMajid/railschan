@@ -1,1 +1,9 @@
-
+= form_for @post do |f|
+  %p
+    %label{for: 'Author'} Author
+    = f.text_field :author
+  %p
+    %label{for: 'Content'} Content
+    = f.text_area :content
+  %p
+    = f.submit
