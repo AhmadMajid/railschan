@@ -39,7 +39,7 @@ module Railschan
 
     # Generators
     config.generators do |g|
-      g.test_framework :rspec
+      g.test_framework :rspec, fixture: false, views:false
     end
 
     # Configure the default encoding used in templates for Ruby 1.9.
