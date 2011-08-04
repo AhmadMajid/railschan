@@ -10,6 +10,9 @@ module NavigationHelpers
 
     when /^the home\s?page$/
       '/'
+    when /the new poststhread page/
+      new_poststhread_path
+
     when /the new post page/
       new_post_path
 
