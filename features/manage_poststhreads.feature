@@ -1,22 +1,10 @@
 Feature: Manage poststhreads
-  In order to [goal]
-  [stakeholder]
-  wants [behaviour]
-  
+  In order to create a thread
+  A troll
+  wants to post
+
   Scenario: Register new poststhread
     Given I am on the new poststhread page
-    And I press "Create"
-
-  Scenario: Delete poststhread
-    Given the following poststhreads:
-      ||
-      ||
-      ||
-      ||
-      ||
-    When I delete the 3rd poststhread
-    Then I should see the following poststhreads:
-      ||
-      ||
-      ||
-      ||
+    When I fill in "post_content" with "long cat is long"
+    And I press "Create Post"
+    Then I should see "long cat is long"
