@@ -25,6 +25,8 @@
     -for post in @board.posts
       #post
         %p
+          =link_to '[Reply]', post_url(board: @board, post: post)
+        %p
           Name:
           = post.author
         %p

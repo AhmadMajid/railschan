@@ -6,9 +6,12 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new
   end
 
   def show
+    @board = Board.find(params[:board_id])
+    @post = Post.find(params[:id])
   end
 
 end
