@@ -1,4 +1,5 @@
 Railschan::Application.routes.draw do
+  root to: 'boards#index'
 
   resources :boards do
     resources :posts_threads do
