@@ -1,0 +1,17 @@
+#post
+  %p
+    Name:
+    = @post.author
+  %p
+    E-Mail:
+    = @post.author_email
+  %p
+    Subject:
+    = @post.subject
+  #post_image
+    Image:
+    = image_tag @post.image.url
+  %p
+    Comment:
+    = @post.content
+
