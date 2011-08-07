@@ -5,6 +5,12 @@
       %ul
         - @board.errors.full_messages.each do |msg|
           %li= msg
+  %p
+    %label{for: 'name'} Name
+    = f.text_field :name
+  %p
+    %label{for: 'short_name'} Short Name
+    = f.text_field :short_name
 
   .actions
     = f.submit 'Save'
