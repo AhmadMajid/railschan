@@ -1,12 +1,7 @@
 Railschan::Application.routes.draw do
 
-
-  resources :posts_threads
-
-  resources :boards
-
   resources :boards do
-    resources :posts_thread do
+    resources :posts_threads do
       resources :posts
     end
   end
