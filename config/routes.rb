@@ -2,9 +2,7 @@ Railschan::Application.routes.draw do
   root to: 'boards#index'
 
   resources :boards do
-    resources :posts_threads do
-      resources :posts
-    end
+    resources :posts
   end
 
   # The priority is based upon order of creation:

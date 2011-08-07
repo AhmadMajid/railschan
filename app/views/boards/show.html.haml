@@ -1,5 +1,44 @@
 %p#notice= notice
 
+#post_form
+  =form_for [@board, Post.new] do |f|
+    %p
+      %label{for: 'author'} Name
+      = f.text_field :author
+    %p
+      %label{for: 'author_email'} E-mail
+      = f.text_field :author_email
+    %p
+      %label{for: 'subject'} Subject
+      = f.text_field :subject
+    %p
+      %label{for: 'image'} Image
+      = f.file_field :image
+    %p
+      %label{for: 'content'} Comment
+      = f.text_area :content
+    %p
+      = f.submit
+
+.posts
+  -if @board.posts.size > 0
+    -for post in @board.posts
+      #post
+        %p
+          Name:
+          = post.author
+        %p
+          E-Mail:
+          = post.author_email
+        %p
+          Subject:
+          = post.subject
+        %p
+          Image:
+          = image_tag post.image.url
+        %p
+          Comment:
+          = post.content
 
 = link_to 'Edit', edit_board_path(@board)
 \|

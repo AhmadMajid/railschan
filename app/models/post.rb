@@ -8,5 +8,5 @@ class Post
 
   mount_uploader :image, ImageUploader
 
-  embedded_in :posts_thread, :inverse_of => :posts
+  embedded_in :board, :inverse_of => :posts
 end

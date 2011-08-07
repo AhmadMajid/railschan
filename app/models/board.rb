@@ -6,5 +6,5 @@ class Board
 
   key :short_name # Access the board via /b/, e.g.
 
-  embeds_many :posts_threads
+  embeds_many :posts
 end
