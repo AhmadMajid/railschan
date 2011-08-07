@@ -5,7 +5,7 @@ Railschan::Application.routes.draw do
     resources :posts
   end
 
-  match 'boards/:board/:post' => 'posts#show', :as => :post
+  #get 'boards/:board/:post' => 'posts#show', :as => :post
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
