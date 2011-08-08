@@ -5,7 +5,7 @@ class Post
   field :author_email
   field :subject
   field :content
-  field :id, default: -> {Post.count + 1}
+  field :id, type: Integer, default: -> {Post.count + 1}
 
   key :id
 
