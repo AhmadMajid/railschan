@@ -1,4 +1,25 @@
-#post
+#post_form
+  =form_for [@board, @post.child_posts.build] do |f|
+    %p
+      %label{for: 'author'} Name
+      = f.text_field :author
+    %p
+      %label{for: 'author_email'} E-mail
+      = f.text_field :author_email
+    %p
+      %label{for: 'subject'} Subject
+      = f.text_field :subject
+    %p
+      %label{for: 'image'} Image
+      = f.file_field :image
+    %p
+      %label{for: 'content'} Comment
+      = f.text_area :content
+    %p
+      = f.submit
+
+
+#main_post
   %p
     Name:
     = @post.author
@@ -14,4 +35,24 @@
   %p
     Comment:
     = @post.content
+
+.posts
+  -if @post.child_posts.size > 0
+    -for post in @board.posts
+      #post
+        %p
+          Name:
+          = post.author
+        %p
+          E-Mail:
+          = post.author_email
+        %p
+          Subject:
+          = post.subject
+        #post_image
+          Image:
+          = image_tag post.image.url
+        %p
+          Comment:
+          = post.content
 
