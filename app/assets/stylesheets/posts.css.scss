@@ -3,5 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #post_form {
-  @include blueprint-form;
+  background: #def;
+  size: 40%;
+  border: 1px;
+}
+
+#main_post {
+  background: #ddf;
+}
+
+#post {
+  background: #dfe;
+}
+
+#post_image {
+}
+
+#reply_image {
 }
