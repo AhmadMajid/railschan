@@ -18,7 +18,6 @@
     %p
       = f.submit
 
-
 #main_post
   %p
     Name:
@@ -38,7 +37,7 @@
 
 .posts
   -if @post.child_posts.size > 0
-    -for post in @board.posts
+    -@post.child_posts.each do |post|
       #post
         %p
           Name:
