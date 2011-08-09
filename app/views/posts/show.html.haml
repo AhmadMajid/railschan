@@ -16,7 +16,7 @@
       %label{for: 'content'} Comment
       = f.text_area :content
     %p
-      = f.hidden_field(:parent_post, :id => @replies.first.parent_post)
+      = hidden_field_tag 'parent_post', @replies.first.parent_post.id.to_s
       = f.submit
 
 
