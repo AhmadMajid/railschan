@@ -15,8 +15,8 @@
     %p
       %label{for: 'content'} Comment
       = f.text_area :content
-      = f.hidden_field(:parent_post, id: @replies.first.parent_post.post_number)
     %p
+      = f.hidden_field(:parent_post, :id => @replies.first.parent_post)
       = f.submit
 
 

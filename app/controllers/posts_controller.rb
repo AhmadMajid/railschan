@@ -1,7 +1,13 @@
 class PostsController < ApplicationController
   def create
     @board = Board.find(params[:board_id])
-    @post = @board.posts.create!(params[:post])
+    puts params
+    if(params[:post][:parent_post])
+      @parent = @board.posts.find(params[:post][:parent_post])
+      @post = @parent.child_posts.build(params[:post]).save
+    else
+      @post = @board.posts.create!(params[:post])
+    end
     redirect_to @board, notice: 'Post successful'
   end
 
