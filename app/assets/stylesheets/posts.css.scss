@@ -3,4 +3,5 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #post_form {
+  @include blueprint-form;
 }

@@ -6,3 +6,6 @@
  *= require_tree .
 */
 @import 'blueprint/semantic'
+@import "blueprint/form"
+@import 'posts'
+@import 'boards'
