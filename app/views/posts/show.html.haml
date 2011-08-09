@@ -9,7 +9,7 @@
     %p
       %label{for: 'subject'} Subject
       = f.text_field :subject
-    %p
+    #post_image
       %label{for: 'image'} Image
       = f.file_field :image
     %p
@@ -49,7 +49,7 @@
         %p
           Subject:
           = reply.subject
-        #post_image
+        #reply_image
           Image:
           = image_tag reply.image.url
         %p
