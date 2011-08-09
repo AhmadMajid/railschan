@@ -1,5 +1,5 @@
 #post_form
-  =form_for [@board, @post.child_posts.build] do |f|
+  =form_for [@board, @replies.build] do |f|
     %p
       %label{for: 'author'} Name
       = f.text_field :author
@@ -17,6 +17,7 @@
       = f.text_area :content
     %p
       = f.submit
+
 
 #main_post
   %p
@@ -36,22 +37,22 @@
     = @post.content
 
 .posts
-  -if @post.child_posts.size > 0
-    -@post.child_posts.each do |post|
+  -if @replies.size > 0
+    -@replies.each do |reply|
       #post
         %p
           Name:
-          = post.author
+          = reply.author
         %p
           E-Mail:
-          = post.author_email
+          = reply.author_email
         %p
           Subject:
-          = post.subject
+          = reply.subject
         #post_image
           Image:
-          = image_tag post.image.url
+          = image_tag reply.image.url
         %p
           Comment:
-          = post.content
+          = reply.content
 
