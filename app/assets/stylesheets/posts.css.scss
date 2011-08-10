@@ -10,14 +10,35 @@
 
 #main_post {
   background: #ddf;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #post {
   background: #dfe;
+  margin-left: 5px;
+  margin-right: 200px;
+  margin-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 1px;
+  margin-bottom: 3px;
+  border: 1px solid;
 }
 
 #post_image {
+  padding-right: 5px;
 }
 
 #reply_image {
+  padding-right: 5px;
+}
+
+ul#post_info {
+  list-style-type: none;
+
+  li {
+    float: left;
+    padding-left: 2px;
+    padding-right: 10px;
+  }
 }

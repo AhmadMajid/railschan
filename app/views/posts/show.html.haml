@@ -40,26 +40,26 @@
         %p
           = @post.content
 
-.posts
-  -unless @replies.empty?
-    -@replies.each do |reply|
-      #post
-        %table
-          %tr
-            %td
-              #reply_image
-                = image_tag reply.image.url
-            %td
-              %ul#post_info
-                %li
-                  %strong Name:
-                  = reply.author
-                %li
-                  %strong E-Mail:
-                  = reply.author_email
-                %li
-                  %strong Subject:
-                  = reply.subject
-              %p
-                = reply.content
+  .posts
+    -unless @replies.empty?
+      -@replies.each do |reply|
+        #post
+          %table
+            %tr
+              %td
+                #reply_image
+                  = image_tag reply.image.url
+              %td
+                %ul#post_info
+                  %li
+                    %strong Name:
+                    = reply.author
+                  %li
+                    %strong E-Mail:
+                    = reply.author_email
+                  %li
+                    %strong Subject:
+                    = reply.subject
+                %p
+                  = reply.content
 
