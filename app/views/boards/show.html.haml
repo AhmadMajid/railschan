@@ -31,16 +31,16 @@
                 #post_image
                 = image_tag post.image.url
               %td
-                %li#post_info
-                  %ul
+                %ul#post_info
+                  %li
                     =link_to '[Reply]', [@board, post]
-                  %ul
+                  %li
                     %strong Name:
                     = post.author
-                  %ul
+                  %li
                     %strong E-Mail:
                     = post.author_email
-                  %ul
+                  %li
                     %strong Subject:
                     = post.subject
                 %p
