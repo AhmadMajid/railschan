@@ -25,7 +25,7 @@
     %tr
       %td
         #post_image
-          = image_tag @post.image.url
+          = link_to(image_tag(@post.image.thumb.url), @post.image.url)
       %td
         %ul#post_info
           %li
@@ -48,7 +48,7 @@
             %tr
               %td
                 #reply_image
-                  = image_tag reply.image.url
+                  = link_to(image_tag(reply.image.thumb.url), reply.image.url)
               %td
                 %ul#post_info
                   %li

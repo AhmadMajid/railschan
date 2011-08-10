@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   def create
     @board = Board.find(params[:board_id])
-    puts params
     if(params[:parent_post]) #If I came from the reply post page
       @parent = @board.posts.find(params[:parent_post])
       @post = @parent.child_posts.build(params[:post]).save
