@@ -1,0 +1,4 @@
+= Board.all.each do |b|
+  %ul#board_list
+    %li
+      = link_to("[#{b.short_name}]", b)
