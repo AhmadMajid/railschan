@@ -17,6 +17,10 @@
 %br
 
 #boards
-<script type="text/javascript">  $(function() { window.router = new Railschan.Routers.PostsRouter({posts: <%= @posts.to_json.html_safe -%>}); Backbone.history.start(); }); </script>
+:javascript
+  $(function() {
+    window.router = new Railschan.Routers.BoardsRouter({boards: <%= @boards.to_json.html_safe -%>});
+    Backbone.history.start();
+  });
 
 = link_to 'New Board', new_board_path

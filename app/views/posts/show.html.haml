@@ -21,39 +21,45 @@
 
 
 #main_post
-  %p
-    Name:
-    = @post.author
-  %p
-    E-Mail:
-    = @post.author_email
-  %p
-    Subject:
-    = @post.subject
-  #post_image
-    Image:
-    = image_tag @post.image.url
-  %p
-    Comment:
-    = @post.content
+  %table
+    %tr
+      %td
+        #post_image
+          = image_tag @post.image.url
+      %td
+        %li#post_info
+          %ul
+            %strong Name:
+            = @post.author
+          %ul
+            %strong E-Mail:
+            = @post.author_email
+          %ul
+            %strong Subject:
+            = @post.subject
+        %p
+          = @post.content
 
 .posts
-  -if @replies.size > 0
+  -unless @replies.empty?
     -@replies.each do |reply|
       #post
-        %p
-          Name:
-          = reply.author
-        %p
-          E-Mail:
-          = reply.author_email
-        %p
-          Subject:
-          = reply.subject
-        #reply_image
-          Image:
-          = image_tag reply.image.url
-        %p
-          Comment:
-          = reply.content
+        %table
+          %tr
+            %td
+              #reply_image
+                = image_tag reply.image.url
+            %td
+              %li#post_info
+                %ul
+                  %strong Name:
+                  = reply.author
+                %ul
+                  %strong E-Mail:
+                  = reply.author_email
+                %ul
+                  %strong Subject:
+                  = reply.subject
+              %p
+                = reply.content
 

@@ -25,23 +25,26 @@
     -for post in @board.posts
       -unless post.parent_post
         #post
-          %p
-            =link_to '[Reply]', [@board, post]
-          %p
-            Name:
-            = post.author
-          %p
-            E-Mail:
-            = post.author_email
-          %p
-            Subject:
-            = post.subject
-          #post_image
-            Image:
-            = image_tag post.image.url
-          %p
-            Comment:
-            = post.content
+          %table
+            %tr
+              %td
+                #post_image
+                = image_tag post.image.url
+              %td
+                %li#post_info
+                  %ul
+                    =link_to '[Reply]', [@board, post]
+                  %ul
+                    %strong Name:
+                    = post.author
+                  %ul
+                    %strong E-Mail:
+                    = post.author_email
+                  %ul
+                    %strong Subject:
+                    = post.subject
+                %p
+                  = post.content
 
 = link_to 'Edit', edit_board_path(@board)
 \|
